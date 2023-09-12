@@ -1,50 +1,4 @@
-/* Start Global Rules  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-img {
-    max-width: 100%;
-}
-
-a {
-    display: block;
-}
-
-h1 {
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 140px);
-}
-
-:root {
-    /* Special */
-    --s-color: hsl(322, 100%, 66%);
-    /* Neutral */
-    --n-color-1: hsl(193, 100%, 96%);
-    --n-color-2: hsl(192, 100%, 9%);
-    --n-color-3: hsl(208, 11%, 55%);
-    --radius-border: 60px;
-    --m-opacity: .8;
-}
-
-::selection {
-    background-color: var(--s-color);
-    color: white;
-}
-/* End Global Rules  */
-/* Start Welcome */
+@use '../layout/variables' as *; // Import variables
 
 /* Start Header */
 .welcome {
@@ -53,7 +7,7 @@ ul {
     height: fit-content;
     padding-top: 40px;
     width: 100%;
-    background-color: var(--n-color-1);
+    background-color: $Ncolor1;
     background-image: url(huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-desktop.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,7 +30,7 @@ ul {
     padding: 0 15px;
     width: 170px;
     height: 40px;
-    border-radius: var(--radius-border);
+    border-radius: $Braduis;
     font-size: 15px;
     font-weight: 700;
     text-decoration: solid;
@@ -89,7 +43,7 @@ ul {
 }
 
 .welcome header a:hover {
-    color: var(--n-color-3);
+    color: $Ncolor3;
 }
 
 /* Header Responsive Design */
@@ -133,7 +87,7 @@ ul {
     font-weight: 700;
     font-size: 30px;
     line-height: 1.5;
-    color: var(--n-color-2);
+    color: $Ncolor2;
 }
 
 .welcome .content .text p {
@@ -141,14 +95,14 @@ ul {
     font-size: 15px;
     font-weight: 500;
     line-height: 1.5;
-    color: var(--n-color-3);
+    color: $Ncolor3;
 }
 
 .welcome .content .text a {
     width: 220px;
-    background-color: var(--s-color);
+    background-color: $Scolor;
     padding: 15px;
-    border-radius: var(--radius-border);
+    border-radius: $Braduis;
     text-decoration: solid;
     text-align: center;
     color: white;
@@ -159,7 +113,7 @@ ul {
 }
 
 .welcome .content .text a:hover {
-    opacity: var(--m-opacity);
+    opacity: $Mopacity;
     transform: scale(1.1);
 }
 
@@ -227,13 +181,13 @@ ul {
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: 750;
-    color: var(--n-color-2);
+    color: $Ncolor2;
 }
 
 .section .card .text p {
     font-size: 18px;
     font-weight: 500;
-    color: var(--n-color-3);
+    color: $Ncolor3;
 }
 
 .section .card .image {
@@ -293,7 +247,7 @@ ul {
 /* Start Footer */
 footer {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--n-color-2);
+    background-color: $Ncolor2;
     margin-top: 250px;
     padding: 130px 0 60px;
     position: relative;
@@ -335,7 +289,7 @@ footer .card h1 {
 }
 
 footer .card a {
-    background-color: var(--s-color);
+    background-color: $Scolor;
     padding: 20px;
     width: 270px;
     margin-top: 30px;
@@ -407,7 +361,7 @@ footer .container .content .text-1 .all {
 
 footer .container .content .text-1 .all p {
     margin-left: 20px;
-    color: var(--n-color-1);
+    color: $Ncolor1;
 }
 
 footer .container .content .text-1 .info-1 svg{
@@ -438,7 +392,7 @@ footer .container .content .text-2 .all-2:nth-child(3) a:not(:first-child) {
 }
 
 footer .container .content .text-2 .all-2:nth-child(3) a:hover {
-    color: var(--s-color);
+    color: $Scolor;
 }
 
 footer .container .content .text-2 .all-2 a{
