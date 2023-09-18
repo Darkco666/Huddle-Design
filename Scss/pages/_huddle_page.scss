@@ -406,33 +406,44 @@ footer {
                 font-weight: 300;
                 padding-top: 25px;
 
-                .all-2:not(:last-child) a{
+                .info-1 a,
+                .info-2 a {
                     margin-bottom: 20px;
+                    color: white;
+                    text-decoration: solid;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
 
-                .all-2:nth-child(3) {
+                .social-links {
                     display: flex;
                     font-size: 25px;
                     justify-content: center;
 
+                    a {
+                        color: white;
+                        text-decoration: solid;
+
+                        &:hover {
+                            color: $Scolor;
+                        }
+                    }
+
                     a:not(:first-child) {
                         margin-left: 20px;
                     }
-
-                    a:hover {
-                        color: $Scolor;
-                    }
                 }
 
-                .all-2 a{
-                    color: white;
-                    text-decoration: solid;
+                // .social-links a {
+                //     color: white;
+                //     text-decoration: solid;
 
-                    a:hover {
-                        text-decoration: underline;
-                    }
-                    
-                }
+                //     a:hover {
+                //         text-decoration: underline;
+                //     }
+                // }
             }
 
             > p {

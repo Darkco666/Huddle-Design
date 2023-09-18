@@ -387,27 +387,32 @@ footer .container .content .text-2 {
   font-weight: 300;
   padding-top: 25px;
 }
-footer .container .content .text-2 .all-2:not(:last-child) a {
+footer .container .content .text-2 .info-1 a,
+footer .container .content .text-2 .info-2 a {
   margin-bottom: 20px;
-}
-footer .container .content .text-2 .all-2:nth-child(3) {
-  display: flex;
-  font-size: 25px;
-  justify-content: center;
-}
-footer .container .content .text-2 .all-2:nth-child(3) a:not(:first-child) {
-  margin-left: 20px;
-}
-footer .container .content .text-2 .all-2:nth-child(3) a:hover {
-  color: hsl(322, 100%, 66%);
-}
-footer .container .content .text-2 .all-2 a {
   color: white;
   -webkit-text-decoration: solid;
           text-decoration: solid;
 }
-footer .container .content .text-2 .all-2 a a:hover {
+footer .container .content .text-2 .info-1 a:hover,
+footer .container .content .text-2 .info-2 a:hover {
   text-decoration: underline;
+}
+footer .container .content .text-2 .social-links {
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+}
+footer .container .content .text-2 .social-links a {
+  color: white;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+footer .container .content .text-2 .social-links a:hover {
+  color: hsl(322, 100%, 66%);
+}
+footer .container .content .text-2 .social-links a:not(:first-child) {
+  margin-left: 20px;
 }
 footer .container .content > p {
   font-size: 13px;
