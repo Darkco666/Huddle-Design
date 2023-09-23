@@ -26,6 +26,12 @@ ul {
     margin-left: auto;
     margin-right: auto;
     width: calc(100% - 140px);
+
+    @media (max-width: 510px) {
+        & {
+            width: calc(100% - 75px);
+        }
+    }
 }
 
 ::selection {

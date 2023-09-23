@@ -1,0 +1,15 @@
+@mixin flex($futures: all, $Jcontent: none, $Acontent: none) {
+    @if $futures == all {
+        display: flex;
+        justify-content: $Jcontent;
+        align-items: $Acontent;
+    }
+    @else if $futures == 'f1Jc' {
+        display: flex;
+        justify-content: $Jcontent;
+    }
+    @else if $futures == 'f1Al' {
+        display: flex;
+        align-items: $Acontent;
+    }
+}
