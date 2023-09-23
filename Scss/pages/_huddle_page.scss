@@ -1,4 +1,5 @@
 @use '../layout/variables' as *; // Import variables
+@use '../Helpers/mixins' as *; // Import Mixins
 
 /* Start Header */
 .welcome {
@@ -7,17 +8,14 @@
     padding-top: 40px;
     width: 100%;
     background-color: $Ncolor1;
-    background-image: url(
-        ../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-desktop.svg);
+    background-image: url(../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-desktop.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
     .container header {
         margin-bottom: 55px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;  
+        @include flex(all, space-between, center);
 
         img {
             width: 150px;
@@ -32,8 +30,7 @@
             font-size: 15px;
             font-weight: 700;
             text-decoration: solid;
-            display: flex;
-            justify-content: center;
+            @include flex('f1Jc', center);
             line-height: 2.6;
             box-shadow: 0 2px 10px 0 rgb(227, 224, 224);
             color: var(--n-color-2);
@@ -46,6 +43,7 @@
     }
 
     @media (max-width: 568px) {
+
         // Header Responsive Design
         & {
             padding-top: 20px;
@@ -96,7 +94,7 @@
 .welcome {
     .content {
         display: grid;
-        grid-template-columns: repeat(2, minmax(200px , 1fr));
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
         padding-bottom: 60px;
         column-gap: 50px;
 
@@ -142,9 +140,10 @@
     }
 
     @media (max-width: 969px) {
+
         // Content Responsive Design
         .content {
-            grid-template-columns:  minmax(200px, 1fr);
+            grid-template-columns: minmax(200px, 1fr);
             row-gap: 60px;
             padding-bottom: 40px;
 
@@ -152,9 +151,7 @@
                 display: grid;
 
                 .btn {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex(center, center);
                 }
 
                 h1 {
@@ -193,9 +190,8 @@
         column-gap: 70px;
 
         .text {
-            display: flex;
+            @include flex('f1Al', none, center);
             flex-wrap: wrap;
-            align-content: center;
             padding-left: 60px;
             line-height: 1.6;
 
@@ -231,9 +227,10 @@
         .image img {
             width: 80%;
         }
-    }  
+    }
 
     @media (max-width: 899px) {
+
         // Section Responsive Desing 
         .container {
             width: calc(100% - 50px);
@@ -290,12 +287,10 @@ footer {
         top: -150px;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
+        @include flex(all, center, center);
         flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
         position: absolute;
-        border-radius: 10px;   
+        border-radius: 10px;
 
         h1 {
             font-size: 28px;
@@ -322,7 +317,7 @@ footer {
                 width: 310px;
                 opacity: .8;
             }
-            
+
         }
 
         &::before {
@@ -336,7 +331,7 @@ footer {
             background-color: white;
             z-index: -1;
             box-shadow: 0 -10px 10px 0 rgba(252, 248, 248, 0.982);
-        }   
+        }
     }
 
     // Card Responsive Desing
@@ -364,12 +359,12 @@ footer {
 
 footer {
     .container {
-        padding-left:50px;
+        padding-left: 50px;
         position: relative;
 
         .content {
             display: grid;
-            grid-template-columns: minmax(100px , 430px) minmax(100px, 1fr);
+            grid-template-columns: minmax(100px, 430px) minmax(100px, 1fr);
             column-gap: 30px;
             color: white;
 
@@ -377,7 +372,7 @@ footer {
                 display: grid;
                 row-gap: 25px;
 
-                .image img{
+                .image img {
                     width: 150px;
                     margin-bottom: 13px;
                 }
@@ -393,7 +388,7 @@ footer {
                     }
                 }
 
-                .info-1 svg{
+                .info-1 svg {
                     width: auto;
                 }
             }
@@ -418,9 +413,8 @@ footer {
                 }
 
                 .social-links {
-                    display: flex;
+                    @include flex('f1Jc', center);
                     font-size: 25px;
-                    justify-content: center;
 
                     a {
                         color: white;
@@ -435,18 +429,9 @@ footer {
                         margin-left: 20px;
                     }
                 }
-
-                // .social-links a {
-                //     color: white;
-                //     text-decoration: solid;
-
-                //     a:hover {
-                //         text-decoration: underline;
-                //     }
-                // }
             }
 
-            > p {
+            >p {
                 font-size: 13px;
                 grid-column: span 3;
                 text-align: end;
@@ -465,7 +450,7 @@ footer {
                 row-gap: 30px;
                 column-gap: 0;
 
-                > p {
+                >p {
                     padding-top: 50px;
                     text-align: center;
                 }
@@ -484,8 +469,8 @@ footer {
 
             /* Start Text-2 Design */
             .content {
-                > p {
-                padding-top: 5px;
+                >p {
+                    padding-top: 5px;
                 }
 
                 .text-2 {
@@ -500,7 +485,10 @@ footer {
                     }
                 }
             }
-        } /* End Text-2 Design */
-    } 
-} 
+        }
+
+        /* End Text-2 Design */
+    }
+}
+
 /* End Footer */

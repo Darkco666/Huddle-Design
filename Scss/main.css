@@ -171,11 +171,6 @@ ul {
   .welcome .content .text {
     display: grid;
   }
-  .welcome .content .text .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .welcome .content .text h1 {
     line-height: 1.4;
     font-size: 25px;
@@ -210,8 +205,8 @@ ul {
 }
 .section .card .text {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  align-content: center;
   padding-left: 60px;
   line-height: 1.6;
 }
@@ -287,9 +282,9 @@ footer .card {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   position: absolute;
   border-radius: 10px;
 }
@@ -400,8 +395,8 @@ footer .container .content .text-2 .info-2 a:hover {
 }
 footer .container .content .text-2 .social-links {
   display: flex;
-  font-size: 25px;
   justify-content: center;
+  font-size: 25px;
 }
 footer .container .content .text-2 .social-links a {
   color: white;
