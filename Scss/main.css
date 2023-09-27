@@ -52,7 +52,6 @@ ul {
   padding-top: 40px;
   width: 100%;
   background-color: hsl(193, 100%, 96%);
-  background-image: url(../../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-desktop.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -89,7 +88,6 @@ ul {
 @media (max-width: 568px) {
   .welcome {
     padding-top: 20px;
-    background-image: url(../../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-mobile.svg);
     background-size: contain;
   }
   .welcome .container header img {
@@ -156,11 +154,6 @@ ul {
   .welcome .content .text {
     display: grid;
   }
-  .welcome .content .text .but {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .welcome .content .text h1 {
     line-height: 1.4;
     font-size: 25px;
@@ -168,6 +161,11 @@ ul {
   .welcome .content .text h1,
   .welcome .content .text p {
     text-align: center;
+  }
+  .welcome .content .text .but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
