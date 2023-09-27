@@ -1,3 +1,5 @@
+@use '../layout/variables' as *; // Import variables
+
 /* Start Global Rules  */
 * {
     margin: 0;
@@ -28,8 +30,14 @@ ul {
     width: calc(100% - 140px);
 }
 
+@media (max-width: 568px) {
+    .container {
+        width: calc(100% - 60px);
+    }
+}
+
 ::selection {
-    background-color: var(--s-color);
+    background-color: $Scolor;
     color: white;
 }
 /* End Global Rules */
