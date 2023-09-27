@@ -9,6 +9,7 @@
     padding-top: 40px;
     width: 100%;
     background-color: $Ncolor1;
+    background-image: url(../../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-desktop.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -47,10 +48,11 @@
         }
     }
 
-    // Header Responsive Design 
+    /* Header Responsive Design */
     @media (max-width: 568px) {
         & {
             padding-top: 20px;
+            background-image: url(../../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-mobile.svg);
             background-size: contain;
         }
 
@@ -119,36 +121,36 @@
             }
         }
     }
-
-    // Content Responsive Design 
-    @media (max-width: 969px) {
-        .content {
-            grid-template-columns:  minmax(200px, 1fr);
-            row-gap: 60px;
-            padding-bottom: 40px;
-        }
-
-        .content .text {
-            display: grid;
-
-            h1 {
-                line-height: 1.4;
-                font-size: 25px;
-            }
-
-            h1,
-            p {
-                text-align: center;
-            }
-
-            .but {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
 } 
+
+/* Content Responsive Design */
+@media (max-width: 969px) {
+    .welcome .content {
+        grid-template-columns:  minmax(200px, 1fr);
+        row-gap: 60px;
+        padding-bottom: 40px;
+    }
+
+    .welcome .content .text {
+        display: grid;
+    }
+
+    .welcome .content .text .but {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcome .content .text h1 {
+        line-height: 1.4;
+        font-size: 25px;
+    }
+
+    .welcome .content .text h1,
+    .welcome .content .text p {
+        text-align: center;
+    }
+}
 
 /* End Content */
 /* End Welcome */
@@ -158,60 +160,60 @@
     margin-top: 120px;
     display: grid;
     grid-template-columns: minmax(200px, 1fr);
+}
 
-    .card {
-        margin-bottom: 40px;
-        padding: 30px;
-        background-color: white;
-        box-shadow: 0 0 10px 0 rgb(236, 232, 232);
-        border-radius: 15px;
-        font-size: 18px;
-        font-weight: 600;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        column-gap: 70px;
+.section .card {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgb(236, 232, 232);
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    column-gap: 70px;
+}
 
-        .text {
-            display: flex;
-            flex-wrap: wrap;
-            align-content: center;
-            padding-left: 60px;
-            line-height: 1.6;
+.section .card .text {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 60px;
+    line-height: 1.6;
+}
 
-            h1 {
-                font-size: 25px;
-                margin-bottom: 10px;
-                font-weight: 750;
-                color: $Ncolor2;
-            }
+.section .card .text h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 750;
+    color: $Ncolor2;
+}
 
-            p {
-                font-size: 18px;
-                font-weight: 500;
-                color: $Ncolor3;
-            }
-        }
+.section .card .text p {
+    font-size: 18px;
+    font-weight: 500;
+    color: $Ncolor3;
+}
 
-        .image {
-            display: flex;
+.section .card .image {
+    display: flex;
+}
 
-            img {
-                width: 80%;
-            }
-        }
-    }
+.section .card:nth-child(1) .image,
+.section .card:last-child .image {
+    justify-content: flex-end;
+    padding-top: 25px;
+}
 
-    .card:nth-child(1) .image,
-    .card:last-child .image {
-        justify-content: flex-end;
-        padding-top: 25px;
-    }
+.section .card:nth-child(2) .image {
+    justify-content: center;
+    padding: 30px 0 30px 30px;
+}
 
-    .card:nth-child(2) .image {
-        justify-content: center;
-        padding: 30px 0 30px 30px;
-    }
-}  
+.section .card .image img {
+    width: 80%;
+}
 
 /* Section Responsive Desing */
 @media (max-width: 899px) {
@@ -415,7 +417,6 @@ footer .container .content > p {
     grid-column: span 3;
     text-align: end;
     margin-top: -10px;
-    margin-right: 20px;
 }
 
 /* Content Responsive Design */
@@ -433,7 +434,6 @@ footer .container .content > p {
     footer .container .content > p {
         padding-top: 50px;
         text-align: center;
-        margin-right: 0;
     }
 
     footer .container .content .text-1 {
