@@ -1,0 +1,15 @@
+@mixin flex($featurs:all, $justfiy:none , $align:none) {
+    @if $featurs == all {
+        display: flex;
+        justify-content: $justfiy;
+        align-items: $align;
+    }
+    @if $featurs == 'j' {
+        display: flex;
+        justify-content: $justfiy;
+    }
+    @if $featurs == 'a' {
+        display: flex;
+        align-items: $align;
+    }
+}
