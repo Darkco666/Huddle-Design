@@ -1,4 +1,5 @@
 @use '../layout/variables' as *; // Import variables
+@use '../Helpers/mixins' as m; // Import Mixins
 
 /* Start Header */
 .welcome {
@@ -15,9 +16,7 @@
 
     .container header {
         margin-bottom: 55px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;  
+        @include m.flex(all, space-between, center);
 
         img {
             width: 150px;
@@ -25,6 +24,7 @@
 
         a {
             background-color: white;
+            @include m.flex('j', center);
             padding: 0 15px;
             width: 170px;
             height: 40px;
@@ -32,8 +32,6 @@
             font-size: 15px;
             font-weight: 700;
             text-decoration: solid;
-            display: flex;
-            justify-content: center;
             line-height: 2.6;
             box-shadow: 0 2px 10px 0 rgb(227, 224, 224);
             color: var(--n-color-2);
@@ -152,9 +150,7 @@
                 display: grid;
 
                 .btn {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include m.flex('j', center, center);
                 }
 
                 h1 {
@@ -193,9 +189,8 @@
         column-gap: 70px;
 
         .text {
-            display: flex;
+            @include m.flex('a', none, center);
             flex-wrap: wrap;
-            align-content: center;
             padding-left: 60px;
             line-height: 1.6;
 
@@ -290,10 +285,8 @@ footer {
         top: -150px;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
+        @include m.flex(all, center, center);
         flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
         position: absolute;
         border-radius: 10px;   
 
@@ -418,9 +411,8 @@ footer {
                 }
 
                 .social-links {
-                    display: flex;
+                    @include m.flex('j', center);
                     font-size: 25px;
-                    justify-content: center;
 
                     a {
                         color: white;
@@ -435,15 +427,6 @@ footer {
                         margin-left: 20px;
                     }
                 }
-
-                // .social-links a {
-                //     color: white;
-                //     text-decoration: solid;
-
-                //     a:hover {
-                //         text-decoration: underline;
-                //     }
-                // }
             }
 
             > p {
@@ -499,8 +482,8 @@ footer {
                         margin-top: 30px;
                     }
                 }
-            }
-        } // End Text-2 Design 
+            } // End Text-2 Design 
+        } 
     } 
 } 
 /* End Footer */
