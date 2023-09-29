@@ -29,7 +29,7 @@ ul {
 }
 @media (max-width: 510px) {
   .container {
-    width: calc(100% - 75px);
+    width: calc(100% - 71px);
   }
 }
 
@@ -439,13 +439,9 @@ footer .container .content > p {
   }
 }
 @media (max-width: 502px) {
-  footer {
-    /* End Text-2 Design */
-  }
   footer .container {
     width: calc(100% - 20px);
     padding: 0 10px;
-    /* Start Text-2 Design */
   }
   footer .container .content > p {
     padding-top: 5px;
